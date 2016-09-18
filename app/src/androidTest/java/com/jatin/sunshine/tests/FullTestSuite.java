@@ -1,4 +1,4 @@
-package com.jatin.tests;
+package com.jatin.sunshine.tests;
 
 import android.test.suitebuilder.TestSuiteBuilder;
 

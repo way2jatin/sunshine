@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jatin.tests;
+package com.jatin.sunshine.tests;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -41,7 +41,7 @@ public class TestProvider extends AndroidTestCase {
         WeatherDbHelper dbHelper = new WeatherDbHelper(mContext);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-        ContentValues testValues = com.jatin.tests.TestDb.createNorthPoleLocationValues();
+        ContentValues testValues = TestDb.createNorthPoleLocationValues();
 
         long locationRowId;
         locationRowId = db.insert(LocationEntry.TABLE_NAME, null, testValues);
@@ -62,7 +62,7 @@ public class TestProvider extends AndroidTestCase {
                 null  // sort order
         );
 
-        com.jatin.tests.TestDb.validateCursor(cursor, testValues);
+        TestDb.validateCursor(cursor, testValues);
 
         // Now see if we can successfully query if we include the row id
         cursor = mContext.getContentResolver().query(
@@ -73,10 +73,10 @@ public class TestProvider extends AndroidTestCase {
                 null  // sort order
         );
 
-        com.jatin.tests.TestDb.validateCursor(cursor, testValues);
+        TestDb.validateCursor(cursor, testValues);
 
         // Fantastic.  Now that we have a location, add some weather!
-        ContentValues weatherValues = com.jatin.tests.TestDb.createWeatherValues(locationRowId);
+        ContentValues weatherValues = TestDb.createWeatherValues(locationRowId);
 
         long weatherRowId = db.insert(WeatherEntry.TABLE_NAME, null, weatherValues);
         assertTrue(weatherRowId != -1);
@@ -90,7 +90,7 @@ public class TestProvider extends AndroidTestCase {
                 null // columns to group by
         );
 
-        com.jatin.tests.TestDb.validateCursor(weatherCursor, weatherValues);
+        TestDb.validateCursor(weatherCursor, weatherValues);
 
         dbHelper.close();
     }

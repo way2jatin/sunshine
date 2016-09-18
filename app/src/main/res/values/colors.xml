@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#cccccc</color>
+    <color name="grey_700">#646464</color>
+    <color name="black">#000000</color>
+
+    <color name="sunshine_light_blue">#CCFFCC</color>
+    <color name="sunshine_blue">#FF0066</color>
+    <color name="forecast_text_view_color">#666666</color>
+
+</resources>

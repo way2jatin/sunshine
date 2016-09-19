@@ -32,7 +32,7 @@ import java.util.Date;
  */
 public class ForecastFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    private com.jatin.sunshine.ForecastAdapter mForecastAdapter;
+    private ForecastAdapter mForecastAdapter;
     private boolean mUseTodayLayout;
     private static final int FORECAST_LOADER = 0;
     private String mLocation;

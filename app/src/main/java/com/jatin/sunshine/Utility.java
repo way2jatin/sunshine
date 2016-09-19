@@ -255,4 +255,33 @@ public class Utility {
         }
         return -1;
     }
+
+    public static int getBackgroundForWeatherCondition(int weatherId) {
+        // Based on weather code data found at:
+        // http://bugs.openweathermap.org/projects/api/wiki/Weather_Condition_Codes
+        if (weatherId >= 200 && weatherId <= 232) {
+            return R.color.grey_700;
+        } else if (weatherId >= 300 && weatherId <= 321) {
+            return R.color.md_light_blue_200;
+        } else if (weatherId >= 500 && weatherId <= 504) {
+            return R.color.md_light_blue_700;
+        } else if (weatherId == 511) {
+            return R.color.md_grey_500;
+        } else if (weatherId >= 520 && weatherId <= 531) {
+            return R.color.md_light_blue_700;
+        } else if (weatherId >= 600 && weatherId <= 622) {
+            return R.color.md_light_blue_700;
+        } else if (weatherId >= 701 && weatherId <= 761) {
+            return R.color.md_grey_900;
+        } else if (weatherId == 761 || weatherId == 781) {
+            return R.color.grey_700;
+        } else if (weatherId == 800) {
+            return R.color.md_blue_grey_600;
+        } else if (weatherId == 801) {
+            return R.color.md_amber_300;
+        } else if (weatherId >= 802 && weatherId <= 804) {
+            return R.color.md_amber_50;
+        }
+        return -1;
+    }
 }

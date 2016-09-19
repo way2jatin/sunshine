@@ -4,7 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.jatin.sunshine.data.WeatherContract.*;
+import com.jatin.sunshine.data.WeatherContract.LocationEntry;
+import com.jatin.sunshine.data.WeatherContract.WeatherEntry;
 
 /**
  * Created by Administrator on 2014/11/18.

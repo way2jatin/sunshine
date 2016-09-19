@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class ForecastAdapter extends CursorAdapter {
@@ -54,14 +56,22 @@ public class ForecastAdapter extends CursorAdapter {
         switch (viewType) {
             case VIEW_TYPE_TODAY: {
                 // Get weather icon
-                viewHolder.iconView.setImageResource(com.jatin.sunshine.Utility.getArtResourceForWeatherCondition(
+                viewHolder.iconView.setImageResource(Utility.getArtResourceForWeatherCondition(
+                        cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
+                viewHolder.lin_bkg.setBackgroundColor(Utility.getBackgroundForWeatherCondition(
                         cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
                 break;
             }
             case VIEW_TYPE_FUTURE_DAY: {
                 // Get weather icon
-                viewHolder.iconView.setImageResource(com.jatin.sunshine.Utility.getIconResourceForWeatherCondition(
+                viewHolder.iconView.setImageResource(Utility.getIconResourceForWeatherCondition(
                         cursor.getInt(ForecastFragment.COL_WEATHER_CONDITION_ID)));
+                if (cursor.getPosition()%2!=0){
+                    viewHolder.lin_bkg.setBackgroundColor(context.getResources().getColor(R.color.md_blue_grey_50));
+                }
+                else {
+                    viewHolder.lin_bkg.setBackgroundColor(context.getResources().getColor(android.R.color.transparent));
+                }
                 break;
             }
         }
@@ -95,6 +105,7 @@ public class ForecastAdapter extends CursorAdapter {
         public final TextView descriptionView;
         public final TextView highTempView;
         public final TextView lowTempView;
+        public final LinearLayout lin_bkg;
 
         public ViewHolder(View view) {
             iconView = (ImageView) view.findViewById(R.id.list_item_icon);
@@ -102,6 +113,7 @@ public class ForecastAdapter extends CursorAdapter {
             descriptionView = (TextView) view.findViewById(R.id.list_item_forecast_textview);
             highTempView = (TextView) view.findViewById(R.id.list_item_high_textview);
             lowTempView = (TextView) view.findViewById(R.id.list_item_low_textview);
+            lin_bkg = (LinearLayout) view.findViewById(R.id.lin_bkg);
         }
     }
 

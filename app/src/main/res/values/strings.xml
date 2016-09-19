@@ -7,7 +7,7 @@
     <string name="action_refresh">Refresh</string>
     <string name="title_activity_detail">Details</string>
     <string name="detail_text">Detail</string>
-    <string name="pref_title_edit_location">location</string>
+    <string name="pref_title_edit_location">Location</string>
     <string name="pref_default_edit_location">Delhi</string>
     <string name="pref_general_location_key">location</string>
     <!-- Label for the temperature units preference [CHAR LIMIT=30] -->

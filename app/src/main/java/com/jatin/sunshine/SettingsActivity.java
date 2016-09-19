@@ -65,7 +65,7 @@ public class SettingsActivity extends PreferenceActivity
         // are we starting the preference activity?
         if (!mBindingPreference) {
             if (preference.getKey().equals(getString(R.string.pref_general_location_key))) {
-                com.jatin.sunshine.FetchWeatherTask weatherTask = new com.jatin.sunshine.FetchWeatherTask(this);
+                FetchWeatherTask weatherTask = new FetchWeatherTask(this);
                 String location = value.toString();
                 weatherTask.execute(location);
             } else {

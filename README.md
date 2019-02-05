@@ -1,5 +1,5 @@
 Sunshine Weather app.
 ========
-
-![Screen Shot 2016-09-18 at 5.29.50 PM](screenshots/Screen Shot 2016-09-18 at 5.29.50 PM.png)
-![Screen Shot 2016-09-18 at 5.30.34 PM](screenshots/Screen Shot 2016-09-18 at 5.30.34 PM.png)
+<img src="https://raw.githubusercontent.com/way2jatin/sunshine/master/screenshots/Screenshot_20190205-143325.png" alt="Forecast Screenshot" width="200" height="400">
+<img src="https://raw.githubusercontent.com/way2jatin/sunshine/master/screenshots/Screenshot_20190205-143333.png" alt="Settings Screenshot" width="200" height="400">
+<img src="https://raw.githubusercontent.com/way2jatin/sunshine/master/screenshots/Screenshot_20190205-143341.png" alt="Details Screenshot" width="200" height="400">
